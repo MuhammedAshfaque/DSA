@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Pick elements one by one and insert them into sorted portion at correct position
 vector<int> insertionSort(vector<int> &nums)
 {
     for (int i = 1; i < nums.size() ; i++)
@@ -16,6 +17,8 @@ vector<int> insertionSort(vector<int> &nums)
     }
     return nums;
 }
+
+// Repeatedly swap adjacent elements if they are in wrong order. Shift large element to the end in each iteration
 vector<int> bubbleSort(vector<int> &nums)
 {
     for (int i = 0; i < nums.size() - 1; i++)
@@ -37,34 +40,33 @@ vector<int> bubbleSort(vector<int> &nums)
     return nums;
 }
 
+// Select minimum element from unsorted array and swap it with the first element of unsorted array
 vector<int> selectionSort(vector<int> &nums)
 {
     for (int i = 0; i < nums.size() - 1; i++)
     {
-        int minVal = INT_MAX;
-        int mindex = -1;
+        int mindex = i;
         for (int j = i; j < nums.size(); j++)
         {
-            if (minVal > nums[j])
+            if (nums[mindex] > nums[j])
             {
-                minVal = nums[j];
                 mindex = j;
             }
         }
-        // Swap nums[i] with nums[mindex]
+        // Swap nums[i] with nums[mindex]. Because mindex holds index of minimum element in unsorted array
         int temp = nums[mindex];
         nums[mindex] = nums[i];
         nums[i] = temp;
-    }
+    }   // O(n^2)
     return nums;
 }
 
 int main()
 {
     vector<int> arr = {64, 25, 12, 22, 11};
-    arr = selectionSort(arr);
+    // arr = selectionSort(arr);
     // arr = bubbleSort(arr);
-    // arr = insertionSort(arr);
+    arr = insertionSort(arr);
 
     for (int x : arr)
         cout << x << " ";

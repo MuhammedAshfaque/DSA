@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*Pick pivot and place it in its correct position such that all smaller elements are on left side and greater elements are on right side*/
+
+
 int getPartition(vector<int> &nums, int low, int high){
     int pivot = nums[low];
     int i = low;
@@ -27,7 +30,7 @@ void quickSort(vector<int> &nums, int low, int high)
     if (low < high)
     {
         int pIndex = getPartition(nums, low, high);
-        quickSort(nums, low, pIndex-1);
+        quickSort(nums, low, pIndex-1); 
         quickSort(nums, pIndex+1, high);
     }
 }
