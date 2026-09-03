@@ -31,6 +31,7 @@ void merge(vector<int>&nums, int low, int mid, int high){
     // }  same thing
 }
 void mergeSort(vector<int>&nums, int low, int high){
+    // this if condition is base case, when low and high are same, then we have only one element, so it is already sorted, so we return
     if(low >= high) return;
     int mid = (low + high) /2;
     

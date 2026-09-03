@@ -52,9 +52,20 @@ int main(){
     // cout << q.peek() << endl;
     // cout<< q.pop() << endl;
     // cout<< q.pop() << endl;
-
-    vector<int>nums = {1, 2, 3, 4, 5};
-    cout << check(nums);
+   
+    // vector<int>nums = {1, 2, 3, 4, 5};
+    // cout << check(nums);
     
-   return 0;
+    // string s = "a = 1 + 2 * (3 + 4) - 5 / (6 - 7)";
+    // cout << s << endl;
+
+    // int value = 98;
+    // int decrement = 1;
+
+    // int newValue = 97 + (((value - 97 - decrement) % 26 + 26) % 26);
+
+    // cout << newValue << " " << char(newValue);
+
+    cout << (char)('a' + 3) << endl;
+    return 0;
 }

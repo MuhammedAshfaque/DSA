@@ -35,7 +35,9 @@ int upperBound(vector<int> &arr, int target) {
 
 int main(){
     vector<int>nums = {1,2,3,3,5,8,8,10,10,11};
-    int ans = upperBound(nums,3);
-    cout<<ans;
+    int ans1 = lowerBound(nums,3);
+    // int ans2 = upperBound(nums,3);
+    auto lowerBoundIt = lower_bound(nums.begin(), nums.end(), 3) - nums.begin();
+    cout<<ans1<<" "<<lowerBoundIt <<endl;
    return 0;
 }

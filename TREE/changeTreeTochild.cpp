@@ -11,10 +11,10 @@ public:
     }
 };
         //        40
-        //      /    \
-        //     10     20
-        //    /  \    / \
-        //   2    5  30  40
+        //       /  \
+        //     10    20
+        //    /  \   / \
+        //   2    5 30  40
 // This is a algo that converts the tree which will follow the child sum rule..It will convert into like this 
         //        150
         //       /   \

@@ -5,15 +5,15 @@ int main(){
     int a = 4 << 2; 
     int b = 13 >> 2;
 
-    int setbitof5 = __builtin_popcount(5);
-    cout << setbitof5;
+    // int setbitof5 = __builtin_popcount(5);
+    // cout << setbitof5;
     
     //both are deferent
     // cout << a << endl;
     // cout << b << endl;
 
-    // int c = 1 << 4;
-    // cout << c;
+    int c = 1 << 0;
+    cout << c;
 
     // NOT operator
     // int c = ~(-6);
